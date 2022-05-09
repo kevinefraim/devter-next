@@ -1,7 +1,7 @@
 import AppLayout from "../components/AppLayout";
 import ButtonLink from "../components/ButtonLink";
 
-const Home = ({ data }) => {
+const Home = () => {
   return (
     <>
       <AppLayout>

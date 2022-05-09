@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  test_app:
+    image: docker-nextjs
+    ports:
+      - 3000:3000
+    build: .
+    volumes:
+      - ./pages:/app/pages
+      - ./public:/app/public
+      - ./styles:/app/styles
+      - ./components:/app/components
