@@ -10,7 +10,7 @@ app
   .prepare()
   .then(() => {
     const server = express();
-    const showRoutes = require("./routes/test.js");
+    const showRoutes = require("./routes/index.js");
 
     server.use("/api", showRoutes);
 
