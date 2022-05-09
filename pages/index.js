@@ -6,7 +6,7 @@ const Home = ({ data }) => {
     <>
       <AppLayout>
         <section className="grid place-items-center place-content-center h-full w-full   ">
-          <div className="flex flex-col items-center bg-white shadow-2xl p-10 rounded">
+          <div className="flex flex-col items-center bg-white shadow-2xl p-20  rounded">
             <img src="/logo-devter.png" alt="devter" className="w-[120px]" />
             <h1 className="text-blue-800 text-xl font-extrabold mb-0">
               Devter
