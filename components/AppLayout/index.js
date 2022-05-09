@@ -8,7 +8,7 @@ export default function AppLayout({ children }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="w-full h-[100vh]">{children}</main>
+      <main>{children}</main>
     </>
   );
 }
