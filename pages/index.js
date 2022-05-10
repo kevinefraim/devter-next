@@ -14,14 +14,12 @@ const Home = () => {
               src="/logo-devter.png"
               alt="devter"
             />
-            <h1 className="text-blue-800 text-xl font-extrabold mb-0">
+            <h1 className="text-blue-800 text-xl font-extrabold mb-0 mt-2">
               Devter
             </h1>
-            <h2 className="text-blue-400 text-lg">
-              App TEST con NextJs y Express
-            </h2>
+            <h2 className="text-blue-400 text-lg">App de notas con NextJs</h2>
             <div className="mt-2">
-              <ButtonLink path="/users">Entrar</ButtonLink>
+              <ButtonLink path="/notes">Entrar</ButtonLink>
             </div>
           </div>
         </section>
