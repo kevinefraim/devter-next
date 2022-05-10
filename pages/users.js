@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 import AppLayout from "../components/AppLayout";
 import ButtonLink from "../components/ButtonLink";
-import TableApi from "../components/users-table";
+import TableApi from "../components/Users-table";
 
 const Users = ({ data }) => {
   return (
@@ -20,10 +20,10 @@ const Users = ({ data }) => {
   );
 };
 
-Users.getInitialProps = async () => {
+export const getServerSideProps = async () => {
   const { data } = await axios.get("http://localhost:3000/api/users");
 
-  return { data };
+  return { props: { data } };
 };
 
 export default Users;

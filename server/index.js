@@ -1,3 +1,5 @@
+//------SERVER DE EXPRESS CUSTOMIZADO EJEMPLO - NO INICIALIZADO-------------
+
 const express = require("express");
 const next = require("next");
 
