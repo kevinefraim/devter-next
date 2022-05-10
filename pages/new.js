@@ -2,7 +2,8 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import React from "react";
 import { useState, useEffect } from "react";
-import { Button, Form, Loader } from "semantic-ui-react";
+import { Loader } from "semantic-ui-react";
+import FormNote from "../components/FormNote";
 import Navbar from "../components/Navbar";
 
 const New = () => {
@@ -63,31 +64,11 @@ const New = () => {
         {isSubmitting ? (
           <Loader active inline="centered" />
         ) : (
-          <Form onSubmit={handleSubmit} className=" w-[40%] text-white p-4 ">
-            <Form.Input
-              label="Title"
-              placeholder="Title"
-              name="title"
-              onChange={handleChange}
-              error={
-                errors.title
-                  ? { content: "Please enter a title", pointing: "below" }
-                  : null
-              }
-            />
-            <Form.TextArea
-              label="Description"
-              placeholder="Description"
-              name="description"
-              onChange={handleChange}
-              error={
-                errors.description
-                  ? { content: "Please enter a description", pointing: "below" }
-                  : null
-              }
-            />
-            <Button type="submit">Create</Button>
-          </Form>
+          <FormNote
+            handleSubmit={handleSubmit}
+            handleChange={handleChange}
+            errors={errors}
+          />
         )}
       </div>
     </>

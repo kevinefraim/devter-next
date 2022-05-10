@@ -14,7 +14,7 @@ const Notes = ({ data }) => {
           Notes
         </h1>
       </div>
-      <div className="grid grid-cols-5 mt-10 ml-10">
+      <div className="grid grid-cols-5 mt-10 ml-10 gap-4">
         {data?.data.map((note) => {
           return <Note key={note._id} note={note} />;
         })}
