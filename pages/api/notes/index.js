@@ -9,7 +9,7 @@ export default async (req, res) => {
 
   if (method === "GET") {
     try {
-      const notes = await Note.find({});
+      const notes = await Note.find();
       return res.status(200).json({ ok: true, data: notes });
     } catch (error) {
       return res.status(400).json({ ok: false });
