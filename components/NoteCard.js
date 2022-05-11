@@ -2,8 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { Button, Card } from "semantic-ui-react";
 
-const Note = ({ note }) => {
-  console.log(note._id);
+const NoteCard = ({ note }) => {
   return (
     <Card style={{ margin: "0" }}>
       <Card.Content>
@@ -25,4 +24,4 @@ const Note = ({ note }) => {
   );
 };
 
-export default Note;
+export default NoteCard;

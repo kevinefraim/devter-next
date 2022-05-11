@@ -2,9 +2,10 @@ import axios from "axios";
 import React from "react";
 import AppLayout from "../../components/AppLayout";
 import Navbar from "../../components/Navbar";
-import Note from "../../components/Note";
+import NoteCard from "../../components/NoteCard";
 
 const Notes = ({ data }) => {
+  console.log(data);
   return (
     <AppLayout>
       <Navbar />
@@ -14,8 +15,8 @@ const Notes = ({ data }) => {
         </h1>
       </div>
       <div className="grid grid-cols-5 mt-10 ml-10 gap-4">
-        {data?.data.map((note) => {
-          return <Note key={note._id} note={note} />;
+        {data?.map((note) => {
+          return <NoteCard key={note._id} note={note} />;
         })}
       </div>
     </AppLayout>
@@ -25,7 +26,7 @@ const Notes = ({ data }) => {
 export const getServerSideProps = async () => {
   const { data } = await axios.get("http://localhost:3000/api/notes");
 
-  return { props: { data } };
+  return { props: data };
 };
 
 export default Notes;
