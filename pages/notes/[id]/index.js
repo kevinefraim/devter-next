@@ -9,7 +9,6 @@ const Note = ({ data }) => {
   const router = useRouter();
   const [confirm, setConfirm] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
-  console.log(data);
 
   useEffect(() => {
     if (isDeleting) {
