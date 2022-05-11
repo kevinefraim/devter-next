@@ -1,20 +1,20 @@
 import Note from "../../../models/Note";
+
 const { default: dbConnect } = require("../../../utils/dbConnect");
-import nextConnect from "next-connect";
-import handler from "../../../handler";
 
 dbConnect();
 
-export default handler
-  .get(async (req, res) => {
+export default async (req, res) => {
+  const { method } = req;
+
+  if (method === "GET") {
     try {
-      const notes = await Note.find();
+      const notes = await Note.find({});
       return res.status(200).json({ ok: true, data: notes });
     } catch (error) {
       return res.status(400).json({ ok: false });
     }
-  })
-  .post(async (req, res) => {
+  } else if (method === "POST") {
     try {
       const newNote = await Note.create(req.body);
 
@@ -22,4 +22,6 @@ export default handler
     } catch (error) {
       return res.status(400).json({ ok: false });
     }
-  });
+  }
+  return res.status(400).json({ ok: false, msg: "Method not recognized" });
+};
