@@ -5,7 +5,6 @@ import Navbar from "../../components/Navbar";
 import Note from "../../components/Note";
 
 const Notes = ({ data }) => {
-  console.log(data);
   return (
     <AppLayout>
       <Navbar />
