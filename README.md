@@ -5,5 +5,5 @@ Tecnologies implemented:
 - Docker
 - MongoDB
 - Mongoose
-- semantic-ui-react
-- tailwind
+- Semantic-ui-react
+- Tailwind
