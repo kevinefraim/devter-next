@@ -6,6 +6,7 @@ services:
       - 3000:3000
     build: .
     volumes:
+      - .:/app
       - ./pages:/app/pages
       - ./public:/app/public
       - ./styles:/app/styles
