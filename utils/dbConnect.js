@@ -2,19 +2,15 @@ import mongoose from "mongoose";
 
 const dbConnect = async () => {
   try {
-    const uri = "mongodb://mongodb:27017";
+    const uri = process.env.MONGO_URI;
 
     const db = await mongoose.connect(uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-
-      user: "admin",
-      pass: "admin123",
+      user: process.env.MONGO_USER,
+      pass: process.env.MONGO_USERPASS,
     });
-    console.log(
-      db.connections[0],
-      "Database connection completed successfully"
-    );
+    console.log("Database connection completed successfully");
   } catch (error) {
     console.log(error, "ERROR CON LA DB");
   }
