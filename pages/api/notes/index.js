@@ -1,6 +1,5 @@
 import Note from "../../../models/Note";
-
-const { default: dbConnect } = require("../../../utils/dbConnect");
+import dbConnect from "../../../utils/dbConnect";
 
 dbConnect();
 
@@ -12,7 +11,9 @@ export default async (req, res) => {
       const notes = await Note.find();
       return res.status(200).json({ ok: true, data: notes });
     } catch (error) {
-      return res.status(400).json({ ok: false });
+      return res
+        .status(400)
+        .json({ ok: false, error: "Could not find any notes" });
     }
   } else if (method === "POST") {
     try {
