@@ -1,7 +1,3 @@
-DEVTER note app
-
-Tecnologies implemented:
-
 # Devter Notes App by Kevin Efraim - with:
 
 🍬 Technologies: NextJs, MongoDB, Mongoose, Docker, Tailwind
