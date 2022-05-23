@@ -4,7 +4,7 @@ const dbConnect = async () => {
   try {
     const uri = process.env.MONGO_URI;
 
-    const db = await mongoose.connect(uri, {
+    await mongoose.connect(uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       user: process.env.MONGO_USER,
