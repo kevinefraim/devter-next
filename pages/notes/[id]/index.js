@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Button, Confirm, Loader } from "semantic-ui-react";
 import AppLayout from "components/AppLayout";
 import Navbar from "components/Navbar";
+import Link from "next/link";
 
 const Note = ({ data }) => {
   const router = useRouter();
@@ -47,9 +48,14 @@ const Note = ({ data }) => {
                 {data?.title}
               </h1>
               <p className="text-2xl">{data?.description}</p>
-              <Button onClick={open} color="red">
-                Delete
-              </Button>
+              <div className="flex gap-2">
+                <Button onClick={open} color="red">
+                  Delete
+                </Button>
+                <Link href={`/notes/${data?._id}/edit`}>
+                  <Button primary>Edit</Button>
+                </Link>
+              </div>
             </div>
           </div>
         )}
