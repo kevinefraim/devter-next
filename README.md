@@ -2,12 +2,9 @@ DEVTER note app
 
 Tecnologies implemented:
 
-- NextJs
-- Docker
-- MongoDB
-- Mongoose
-- Semantic-ui-react
-- Tailwind
+# Devter Notes App by Kevin Efraim - with:
+
+🍬 Technologies: NextJs, MongoDB, Mongoose, Docker, Tailwind
 
 ## Quick Start
 
