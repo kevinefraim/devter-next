@@ -14,7 +14,7 @@ const FormNote = ({ handleSubmit, handleChange, errors, form = null }) => {
             ? { content: "Please enter a title", pointing: "below" }
             : null
         }
-        value={form && form.title}
+        value={form ? form.title : undefined}
       />
       <Form.TextArea
         label="Description"
@@ -26,7 +26,7 @@ const FormNote = ({ handleSubmit, handleChange, errors, form = null }) => {
             ? { content: "Please enter a description", pointing: "below" }
             : null
         }
-        value={form && form.description}
+        value={form ? form.description : undefined}
       />
       <Button type="submit">Save</Button>
     </Form>

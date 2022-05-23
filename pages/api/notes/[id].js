@@ -45,6 +45,7 @@ export default async (req, res) => {
     } catch (error) {
       return res.status(400).json({ ok: false });
     }
+  } else {
+    return res.status(400).json({ ok: false, msg: "Method not recognized" });
   }
-  return res.status(400).json({ ok: false, msg: "Method not recognized" });
 };
