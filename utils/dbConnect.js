@@ -10,7 +10,7 @@ const dbConnect = async () => {
       user: process.env.MONGO_USER,
       pass: process.env.MONGO_USERPASS,
     });
-    console.log("Database connection completed successfully");
+    console.log("Conectado a la DB ;)");
   } catch (error) {
     console.log(error, "ERROR CON LA DB");
   }

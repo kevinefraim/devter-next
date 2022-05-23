@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Loader } from "semantic-ui-react";
 import FormNote from "components/FormNote";
 import Navbar from "components/Navbar";
+import AppLayout from "components/AppLayout";
 
 const New = () => {
   const [form, setForm] = useState({ title: "", description: "" });
@@ -53,7 +54,7 @@ const New = () => {
   };
 
   return (
-    <>
+    <AppLayout>
       <Navbar />
       <div className="flex justify-center my-10">
         <h1 className="text-blue-600 font-extrabold text-6xl px-8 py-4 bg-white shadow-2xl rounded-full">
@@ -71,7 +72,7 @@ const New = () => {
           />
         )}
       </div>
-    </>
+    </AppLayout>
   );
 };
 
