@@ -1,6 +1,6 @@
 import Image from "next/image";
-import AppLayout from "../components/AppLayout.jsx";
-import ButtonLink from "../components/ButtonLink";
+import AppLayout from "components/AppLayout.jsx";
+import ButtonLink from "components/ButtonLink";
 
 const Home = () => {
   return (

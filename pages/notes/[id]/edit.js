@@ -2,9 +2,9 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import { Loader } from "semantic-ui-react";
-import AppLayout from "../../../components/AppLayout";
-import FormNote from "../../../components/FormNote";
-import Navbar from "../../../components/Navbar";
+import AppLayout from "components/AppLayout";
+import FormNote from "components/FormNote";
+import Navbar from "components/Navbar";
 
 const Edit = ({ data }) => {
   const [form, setForm] = useState({

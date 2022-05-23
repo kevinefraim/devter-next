@@ -1,6 +1,6 @@
-import Note from "../../../models/Note";
+import Note from "models/Note";
 
-const { default: dbConnect } = require("../../../utils/dbConnect");
+const { default: dbConnect } = require("utils/dbConnect");
 
 dbConnect();
 

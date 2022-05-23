@@ -3,8 +3,8 @@ import { useRouter } from "next/router";
 import React from "react";
 import { useState, useEffect } from "react";
 import { Loader } from "semantic-ui-react";
-import FormNote from "../components/FormNote";
-import Navbar from "../components/Navbar";
+import FormNote from "components/FormNote";
+import Navbar from "components/Navbar";
 
 const New = () => {
   const [form, setForm] = useState({ title: "", description: "" });

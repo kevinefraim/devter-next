@@ -1,9 +1,9 @@
 import axios from "axios";
 import Link from "next/link";
 import React from "react";
-import AppLayout from "../../components/AppLayout";
-import Navbar from "../../components/Navbar";
-import NoteCard from "../../components/NoteCard";
+import AppLayout from "components/AppLayout";
+import Navbar from "components/Navbar";
+import NoteCard from "components/NoteCard";
 
 const Notes = ({ data }) => {
   console.log(data.length);
